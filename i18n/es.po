@@ -1,0 +1,295 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* partnerTransport
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20170330\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-06 08:28+0000\n"
+"PO-Revision-Date: 2017-04-06 08:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_x_nAuthorization
+msgid "Amount"
+msgstr "Cantidad"
+
+#. module: partnerTransport
+#: model:ir.ui.view,arch_db:partnerTransport.partnerTransport_form
+msgid "Associations"
+msgstr "Associaciones"
+
+#. module: partnerTransport
+#: model:ir.ui.view,arch_db:partnerTransport.partnerTransport_form
+msgid "Authorizations"
+msgstr "Autorizaciones"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_nBuses
+msgid "Buses"
+msgstr "Autocares"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_nContainers
+msgid "Containers"
+msgstr "Contenedores"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_create_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_create_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_create_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_create_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_create_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_create_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_create_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_create_date
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_create_date
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_create_date
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_create_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_create_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_create_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_create_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: partnerTransport
+#: selection:res.partner,x_eJopPosition:0
+msgid "Director Financiero"
+msgstr "Director Financiero"
+
+#. module: partnerTransport
+#: selection:res.partner,x_eJopPosition:0
+msgid "Director Flota"
+msgstr "Director Flota"
+
+#. module: partnerTransport
+#: selection:res.partner,x_eJopPosition:0
+msgid "Director General"
+msgstr "Director General"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_display_name
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_display_name
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_display_name
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_display_name
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_display_name
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_display_name
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_display_name
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: partnerTransport
+#: model:ir.ui.view,arch_db:partnerTransport.partnerTransport_form
+msgid "Fleet"
+msgstr "Flota"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_id
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_id
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_id
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_id
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_id
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_id
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_id
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_id
+msgid "ID"
+msgstr "ID"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations___last_update
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations___last_update
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors___last_update
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities___last_update
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations___last_update
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations___last_update
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors___last_update
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities___last_update
+msgid "Last Modified on"
+msgstr "Última Modifiación en"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_write_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_write_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_write_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_write_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_write_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_write_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_write_uid
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_write_date
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_write_date
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_write_date
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_write_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_write_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_write_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_write_date
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_eJopPosition
+msgid "Cargo"
+msgstr "Cargo"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_nRigidTrucks
+msgid "Rigid Trucks"
+msgstr "Camiones rígidos"
+
+#. module: partnerTransport
+#: selection:res.partner,x_eJopPosition:0
+msgid "Secretario"
+msgstr "Secretario"
+
+#. module: partnerTransport
+#: model:ir.ui.view,arch_db:partnerTransport.partnerTransport_form
+msgid "Sectors"
+msgstr "Sectores"
+
+#. module: partnerTransport
+#: model:ir.ui.view,arch_db:partnerTransport.partnerTransport_form
+msgid "Specialities"
+msgstr "Especialidades"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_nTrailers
+msgid "Trailers"
+msgstr "Semiremolques"
+
+#. module: partnerTransport
+#: model:ir.ui.view,arch_db:partnerTransport.partnerTransport_form
+msgid "Transport"
+msgstr "Transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_x_eAssociation
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_x_strAssociation
+msgid "Transport association"
+msgstr "Asociación de transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_x_eAuthorization
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_x_strAuthorization
+msgid "Transport authorization"
+msgstr "Autorización de transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_x_eSector
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_x_strSector
+msgid "Transport sector"
+msgstr "Sector de transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_x_strSpeciality
+msgid "Transport speciality"
+msgstr "Transport speciality"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_x_eSpeciality
+msgid "Transport specilality"
+msgstr "Especialidad de transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_nTrucks
+msgid "Trucks"
+msgstr "Cabezas tractoras"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_associations_x_idPartner
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_autorizations_x_idPartner
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_sectors_x_idPartner
+#: model:ir.model.fields,field_description:partnerTransport.field_partner_transport_specialities_x_idPartner
+msgid "X idpartner"
+msgstr "X idpartner"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_idTransportAssociations
+msgid "X idtransportassociations"
+msgstr "Asociaciones de transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_idTransportAuthorizations
+msgid "X idtransportauthorizations"
+msgstr "Autorizaciones de transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_idTransportSectors
+msgid "X idtransportsectors"
+msgstr "Sectores de transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_res_partner_x_idTransportSpecialities
+msgid "X idtransportspecialities"
+msgstr "Especialidades transporte"
+
+#. module: partnerTransport
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_associations_x_strKey
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_autorizations_x_strKey
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_sectors_x_strKey
+#: model:ir.model.fields,field_description:partnerTransport.field_transport_specialities_x_strKey
+msgid "key"
+msgstr "key"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_partner_transport_associations
+msgid "partner.transport.associations"
+msgstr "partner.transport.associations"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_partner_transport_autorizations
+msgid "partner.transport.autorizations"
+msgstr "partner.transport.autorizations"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_partner_transport_sectors
+msgid "partner.transport.sectors"
+msgstr "partner.transport.sectors"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_partner_transport_specialities
+msgid "partner.transport.specialities"
+msgstr "partner.transport.specialities"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_transport_associations
+msgid "transport.associations"
+msgstr "transport.associations"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_transport_autorizations
+msgid "transport.autorizations"
+msgstr "transport.autorizations"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_transport_sectors
+msgid "transport.sectors"
+msgstr "transport.sectors"
+
+#. module: partnerTransport
+#: model:ir.model,name:partnerTransport.model_transport_specialities
+msgid "transport.specialities"
+msgstr "transport.specialities"
+
