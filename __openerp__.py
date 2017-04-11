@@ -4,24 +4,21 @@
 {
     "name": 'partner transport data',
     "version": "9.0.1.0",
-    "summary": "extended customer data",
+    "summary": "specific data for transportation companies",
     "description": """
-		author: i-vk
+		i-vk
 		v9.0.1.0
-		extended parner data, applies for ASTIC and SETIR
+		specific data for transportation companies, applies to ASTIC and SETIR
 	""",
-    "category": "Partner",
     "author": "Igor V. Kartashov",
-    "website": "http://crm.setir.es",
     "license": "AGPL-3",
+    "website": "http://crm.setir.es",
+    "category": "Partner",
     "depends": ['base'],
     "data": [
 		"views/partnerTransport.xml",
 		"data/data.xml",
     ],
-    "images": [
-			"images/ivk.png",
-			],
     "installable": True,
     "application": True,
 	"auto_install": False,
