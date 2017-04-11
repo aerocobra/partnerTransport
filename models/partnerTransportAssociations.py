@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #-*- partnerTransportAssociations.py
 from openerp import tools
 from openerp import models, fields, api

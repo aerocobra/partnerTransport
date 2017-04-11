@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #-*- partnerTransportAutorizations.py
 from openerp import tools
 from openerp import models, fields, api

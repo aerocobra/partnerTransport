@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # -*- partnerTransportSectors.py
 from openerp import tools
 from openerp import models, fields, api
@@ -14,4 +15,3 @@ class partnerTransportSectors ( models.Model):
 	
 	x_idPartner	= fields.Many2one	( "res.partner")
 	x_eSector	= fields.Selection	( string = "Transport sector", selection = "get_sectors")
-	x_strV		= fields.Char (default="xcv")

@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-		<record model="ir.ui.view" id="partnerSector_search">
-			<field name="name">partnerSector_search</field>
-			<field name="model">partner.transport.sectors</field>
-			<!-- field name="inherit_id" ref="base.view_partner_form"/ -->
-			<field name="arch" type="xml">
-				<search string="Sectors">
-					<field name="x_strV" filter_domain="[('x_strV','ilike',self)]" string="Sector"/>
-				</search>
-			</field>
-		</record>
-		
 		<!-- For the form view and id field (whatever) -->
 		<record model="ir.ui.view" id="partnerTransport_form">
 			<!-- Name field (whatever) -->
