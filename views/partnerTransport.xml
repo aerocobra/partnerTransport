@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-		<!-- For the form view and id field (whatever) -->
-		<record model="ir.ui.view" id="partnerSearchAll_form">
-			<field name="name">partnerSearchAll_form</field>
+		<!-- search view-->
+		<record model="ir.ui.view" id="partnerTree_form">
+			<field name="name">partnerTree_form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree"/>
+			<field name="arch" type="xml">
+				<field name="display_name" position="after">
+					<field name="parent_id" string = "Matriz"/>
+				</field>
+			</field>
+		</record>
+	</data>
+	<data>
+		<!-- search view-->
+		<record model="ir.ui.view" id="partnerSearch_form">
+			<field name="name">partnerSearch_form</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_res_partner_filter"/>
 			<field name="arch" type="xml">
-				<field name="customer" position="attributes">
+				<!-- replace default filters -->
+				<filter name="customer" position="attributes">
 					<attribute name="domain">"[('is_company','=', True), ('customer','=',1)]"</attribute>
-				</field>
-				<field name="supplier" position="attributes">
+				</filter>
+				<filter name="supplier" position="attributes">
 					<attribute name="domain">"[('is_company','=', True), ('supplier','=',1)]"</attribute>
-				</field>
+				</filter>
 			</field>
 		</record>
 	</data>
