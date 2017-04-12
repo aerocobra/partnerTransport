@@ -2,6 +2,22 @@
 <openerp>
 	<data>
 		<!-- For the form view and id field (whatever) -->
+		<record model="ir.ui.view" id="partnerSearchAll_form">
+			<field name="name">partnerSearchAll_form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_res_partner_filter"/>
+			<field name="arch" type="xml">
+				<field name="customer" position="attributes">
+					<attribute name="domain">"[('is_company','=', True), ('customer','=',1)]"</attribute>
+				</field>
+				<field name="supplier" position="attributes">
+					<attribute name="domain">"[('is_company','=', True), ('supplier','=',1)]"</attribute>
+				</field>
+			</field>
+		</record>
+	</data>
+	<data>
+		<!-- For the form view and id field (whatever) -->
 		<record model="ir.ui.view" id="partnerTransport_form">
 			<!-- Name field (whatever) -->
 			<field name="name">partnerTransport_form</field>
