@@ -123,7 +123,7 @@
 		</record>
 		<record model="transport.associations" id="as2">
 			<field name="x_strKey">as4</field>
-			<field name="x_strAssociation">Otro</field>
+			<field name="x_strAssociation">OtroOO</field>
 		</record>
 	</data>
 </openerp>
