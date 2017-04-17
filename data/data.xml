@@ -117,13 +117,13 @@
 			<field name="x_strKey">as2</field>
 			<field name="x_strAssociation">CETM</field>
 		</record>
-		<record model="transport.associations" id="as2">
+		<record model="transport.associations" id="as3">
 			<field name="x_strKey">as3</field>
 			<field name="x_strAssociation">FEN</field>
 		</record>
-		<record model="transport.associations" id="as2">
+		<record model="transport.associations" id="as4">
 			<field name="x_strKey">as4</field>
-			<field name="x_strAssociation">OtroOO</field>
+			<field name="x_strAssociation">Otro</field>
 		</record>
 	</data>
 </openerp>

@@ -67,13 +67,23 @@
 				<!-- folders -->
 				<notebook position="inside">
 					<page string="Transport" attrs="{'invisible': [('is_company','!=', True)]}">
-						<group col="4" colspan="2">
+						<group col="6" colspan="2">
 							<group string="Fleet">
 								<field name="x_nTrucks"/>
 								<field name="x_nTrailers"/>
 								<field name="x_nRigidTrucks"/>
 								<field name="x_nBuses"/>
 								<field name="x_nContainers"/>
+							</group>
+							<group string="Countries">
+								<field name="x_idsCountries" nolabel="1" readonly="0">
+									<tree string="Countries">
+										<field name="x_eCountry"/>
+									</tree>
+									<form string="Countries">
+										<field name="x_eCountry"/>
+									</form>
+								</field>
 							</group>
 							<group string="Associations">
 								<field name="x_idsAssociations" nolabel="1" readonly="0">

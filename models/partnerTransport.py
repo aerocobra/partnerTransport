@@ -22,3 +22,4 @@ class partnerTransport ( models.Model):
 	x_idsSpecialities	= fields.One2many ( 'partner.transport.specialities', 'x_idPartner', string="Especialidades")
 	x_idsAuthorizations	= fields.One2many ( 'partner.transport.autorizations', 'x_idPartner', string="Autirizaciones")
 	x_idsAssociations	= fields.One2many ( 'partner.transport.associations', 'x_idPartner', string="Asociaciones")
+	x_idsCountries		= fields.One2many ( 'partner.transport.countries', 'x_idPartner', string="Countries", help="Countries there goes")
