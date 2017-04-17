@@ -39,7 +39,7 @@
 		</record>
 		<record model="transport.specialities" id="sp2">
 			<field name="x_strKey">sp2</field>
-			<field name="x_strSpeciality">Frigorificos</field>
+			<field name="x_strSpeciality">Frigoríficos</field>
 		</record>
 		<record model="transport.specialities" id="sp3">
 			<field name="x_strKey">sp3</field>
@@ -63,7 +63,7 @@
 		</record>
 		<record model="transport.specialities" id="sp8">
 			<field name="x_strKey">sp8</field>
-			<field name="x_strSpeciality">Liquidos</field>
+			<field name="x_strSpeciality">Líquidos</field>
 		</record>
 		<record model="transport.specialities" id="sp9">
 			<field name="x_strKey">sp9</field>
@@ -93,7 +93,7 @@
 		</record>
 		<record model="transport.autorizations" id="au3">
 			<field name="x_strKey">au3</field>
-			<field name="x_strAuthorization">A: Publico de mercancias</field>
+			<field name="x_strAuthorization">A: Público de mercancias</field>
 		</record>
 		<record model="transport.autorizations" id="au4">
 			<field name="x_strKey">au4</field>
@@ -101,7 +101,7 @@
 		</record>
 		<record model="transport.autorizations" id="au5">
 			<field name="x_strKey">au5</field>
-			<field name="x_strAuthorization">A: Publico viajeros autobus</field>
+			<field name="x_strAuthorization">A: Público viajeros autobus</field>
 		</record>
 		<record model="transport.autorizations" id="au6">
 			<field name="x_strKey">au6</field>
@@ -115,6 +115,14 @@
 		</record>
 		<record model="transport.associations" id="as2">
 			<field name="x_strKey">as2</field>
+			<field name="x_strAssociation">CETM</field>
+		</record>
+		<record model="transport.associations" id="as2">
+			<field name="x_strKey">as3</field>
+			<field name="x_strAssociation">FEN</field>
+		</record>
+		<record model="transport.associations" id="as2">
+			<field name="x_strKey">as4</field>
 			<field name="x_strAssociation">Otro</field>
 		</record>
 	</data>
