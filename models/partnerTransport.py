@@ -60,8 +60,9 @@ class partnerTransport ( models.Model):
 												column2			= "association_id",
 												string			= "Associations"
 											)
+	@api.model
 	def get_europe ( self):
 		l = []
 		for r in self.env["res.country.group"].search ([('name','=', 'Europe')]).country_ids:
-			l.append ((r.name))
-		return l
+			l.append ((r.id))
+		return [('id', 'in', l)]

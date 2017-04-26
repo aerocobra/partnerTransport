@@ -111,7 +111,7 @@
 					<field name="x_idsCountries" widget="many2many_tags" string = "Paises"/>
 				</field>
 				<field name="display_name" position="after">
-					<field name="x_idsFleet" string = "Flota"/>
+					<field name="x_idsFleet" widget="many2many_tags" string = "Flota"/>
 				</field>
 				<field name="display_name" position="after">
 					<field name="parent_id" string = "Matriz"/>
@@ -168,8 +168,6 @@
 					<!-- attribute name="attrs">{}</attribute -->
 					<!-- attribute name="invisible">True</attribute -->
 				</field>
-
-
 				<!-- folders -->
 				<notebook position="inside">
 					<page string="Transport" attrs="{'invisible': [('is_company','!=', True)]}">
