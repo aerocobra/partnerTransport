@@ -1,110 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
+		<record model="transport.fleet_categories" id="fc1">
+			<field name="x_strFleetCategory">Trucks</field>
+		</record>
+		<record model="transport.fleet_categories" id="fc2">
+			<field name="x_strFleetCategory">Trailers</field>
+		</record>
+		<record model="transport.fleet_categories" id="fc3">
+			<field name="x_strFleetCategory">Rigid Trucks</field>
+		</record>
+		<record model="transport.fleet_categories" id="fc4">
+			<field name="x_strFleetCategory">Buses</field>
+		</record>
+		<record model="transport.fleet_categories" id="fc5">
+			<field name="x_strFleetCategory">Containers</field>
+		</record>
+	</data>
+	<data>
 		<!-- transport.sectors data  -->
 		<record model="transport.sectors" id="se1">
-			<field name="x_strKey">se1</field>
 			<field name="x_strSector">Mercancias</field>
 		</record>
 		<record model="transport.sectors" id="se2">
-			<field name="x_strKey">se2</field>
 			<field name="x_strSector">Viajeros</field>
 		</record>
 		<record model="transport.sectors" id="se3">
-			<field name="x_strKey">se3</field>
 			<field name="x_strSector">UOTC</field>
 		</record>
 		<record model="transport.sectors" id="se4">
-			<field name="x_strKey">se4</field>
 			<field name="x_strSector">Operadores y Auxiliares</field>
 		</record>
 		<record model="transport.sectors" id="se5">
-			<field name="x_strKey">se5</field>
 			<field name="x_strSector">Adheridos</field>
 		</record>
 		<record model="transport.sectors" id="se6">
-			<field name="x_strKey">se6</field>
 			<field name="x_strSector">Asociaciones</field>
 		</record>
 		<record model="transport.sectors" id="se7">
-			<field name="x_strKey">se7</field>
 			<field name="x_strSector">Agencias</field>
 		</record>
 	</data>
 	<data>
 		<!-- transport.specialities data -->
 		<record model="transport.specialities" id="sp1">
-			<field name="x_strKey">sp1</field>
 			<field name="x_strSpeciality">Carga general</field>
 		</record>
 		<record model="transport.specialities" id="sp2">
-			<field name="x_strKey">sp2</field>
 			<field name="x_strSpeciality">Frigoríficos</field>
 		</record>
 		<record model="transport.specialities" id="sp3">
-			<field name="x_strKey">sp3</field>
 			<field name="x_strSpeciality">Portavehiculos</field>
 		</record>
 		<record model="transport.specialities" id="sp4">
-			<field name="x_strKey">sp4</field>
 			<field name="x_strSpeciality">Mudanzas</field>
 		</record>
 		<record model="transport.specialities" id="sp5">
-			<field name="x_strKey">sp5</field>
 			<field name="x_strSpeciality">Contenedores o Portacontenedores</field>
 		</record>
 		<record model="transport.specialities" id="sp6">
-			<field name="x_strKey">sp6</field>
 			<field name="x_strSpeciality">Especiales</field>
 		</record>
 		<record model="transport.specialities" id="sp7">
-			<field name="x_strKey">sp7</field>
 			<field name="x_strSpeciality">Gases</field>
 		</record>
 		<record model="transport.specialities" id="sp8">
-			<field name="x_strKey">sp8</field>
 			<field name="x_strSpeciality">Líquidos</field>
 		</record>
 		<record model="transport.specialities" id="sp9">
-			<field name="x_strKey">sp9</field>
 			<field name="x_strSpeciality">Alimentarios</field>
 		</record>
 		<record model="transport.specialities" id="sp10">
-			<field name="x_strKey">s10</field>
 			<field name="x_strSpeciality">Peligrosas</field>
 		</record>
 		<record model="transport.specialities" id="sp11">
-			<field name="x_strKey">s11</field>
 			<field name="x_strSpeciality">Pulverulentos</field>
 		</record>
 		<record model="transport.specialities" id="sp12">
-			<field name="x_strKey">s12</field>
 			<field name="x_strSpeciality">Otros</field>
 		</record>
 	</data>
 	<data>
 		<record model="transport.authorizations" id="au1">
-			<field name="x_strKey">au1</field>
 			<field name="x_strAuthorization">L: Mercancias</field>
 		</record>
 		<record model="transport.authorizations" id="au2">
-			<field name="x_strKey">au2</field>
 			<field name="x_strAuthorization">L: Viajeros</field>
 		</record>
 		<record model="transport.authorizations" id="au3">
-			<field name="x_strKey">au3</field>
 			<field name="x_strAuthorization">A: Público de mercancias</field>
 		</record>
 		<record model="transport.authorizations" id="au4">
-			<field name="x_strKey">au4</field>
 			<field name="x_strAuthorization">A: Privado mercancias</field>
 		</record>
 		<record model="transport.authorizations" id="au5">
-			<field name="x_strKey">au5</field>
 			<field name="x_strAuthorization">A: Público viajeros autobus</field>
 		</record>
 		<record model="transport.authorizations" id="au6">
-			<field name="x_strKey">au6</field>
 			<field name="x_strAuthorization">A: Operador</field>
 		</record>
 	</data>

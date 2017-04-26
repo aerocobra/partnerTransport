@@ -5,12 +5,13 @@ from openerp import models, fields, api
 from pygments.lexer import _inherit
 
 class partnerTransportAutorizations ( models.Model):
-	_name = "partner.transport.authorizations"
+	_name		= "partner.transport.authorizations"
+	_rec_name	= "x_eAuthorization" #IMPORTANTE - por este campo se hace la selección poe defecto en el formulario
 
 	def get_authorizations ( self):
 		l = []
 		for r in self.env["transport.authorizations"].search ([('id','>',-1)]):
-			l.append ( ( r.x_strKey, r.x_strAuthorization))
+			l.append ( ( "at-" + str(r.id), r.x_strAuthorization))
 		return l
 
 	x_idPartner			= fields.Many2one	( "res.partner")

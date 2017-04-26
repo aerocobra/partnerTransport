@@ -1,12 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-		<!-- search view-->
+		<!-- parent = "base.menu_sale_config" -->
+		<!-- parent = "base.menu_sale_config" -->
+		<menuitem id="menu_transport"
+			name = "Transport"
+			parent = "base.menu_sale_config"
+		/>
+		<!-- fleet -->
+		<act_window id="action_transport_fleet_categories"
+			name = "Fleet"
+			res_model = "transport.fleet_categories"
+			view_mode = "tree,form"		
+		/>
+		<menuitem id="menu_transport_fleet_categories"
+			name = "Fleet"
+			parent = "menu_transport"
+			sequence = "20"
+			action="action_transport_fleet_categories"
+		/>
+		<!-- associations-->
+		<act_window id="action_transport_associations"
+			name = "Associations"
+			res_model = "transport.associations"
+			view_mode = "tree,form"		
+		/>
+		<menuitem id="menu__transport_associations"
+			name = "Associations"
+			parent = "menu_transport"
+			sequence = "20"
+			action="action_transport_associations"
+		/>
+		<!-- authorizations -->
+		<act_window id="action_transport_authorizations"
+			name = "Authorizations"
+			res_model = "transport.authorizations"
+			view_mode = "tree,form"		
+		/>
+		<menuitem id="menu__transport_authorizations"
+			name = "Authorizations"
+			parent = "menu_transport"
+			sequence = "20"
+			action="action_transport_authorizations"
+		/>
+		<!-- sectors -->
+		<act_window id="action_transport_sectors"
+			name = "Sectors"
+			res_model = "transport.sectors"
+			view_mode = "tree,form"		
+		/>
+		<menuitem id="menu__transport_sectors"
+			name = "Sectors"
+			parent = "menu_transport"
+			sequence = "20"
+			action="action_transport_sectors"
+		/>
+		<!-- specialities -->
+		<act_window id="action_transport_specialities"
+			name = "Specialities"
+			res_model = "transport.specialities"
+			view_mode = "tree,form"		
+		/>
+		<menuitem id="menu__transport_specialities"
+			name = "Specialities"
+			parent = "menu_transport"
+			sequence = "20"
+			action="action_transport_specialities"
+		/>
+	</data>
+	<data>
+		<!-- remove inherited geo loc fields -->
+		<record model="ir.ui.view" id="partnerTransportTreeGeoRemove_form">
+			<field name="name">partnerTransportTreeGeoRemove_form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="crm_partner_assign.view_res_partner_filter_assign_tree"/>
+			<field name="arch" type="xml">
+				<field name="date_review_next" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+				<field name="grade_id" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+				<field name="activation" position="attributes">
+					<attribute name="invisible">True</attribute>
+				</field>
+			</field>
+		</record>
+	</data>
+	<data>
+		<!-- tree view-->
 		<record model="ir.ui.view" id="partnerTransportTree_form">
 			<field name="name">partnerTransportTree_form</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_partner_tree"/>
 			<field name="arch" type="xml">
+				<!-- new transport fields -->
+				<field name="display_name" position="after">
+					<field name="x_idsSpecialities" widget="many2many_tags" string = "Especialidades"/>
+				</field>
+				<field name="display_name" position="after">
+					<field name="x_idsSectors" widget="many2many_tags" string = "Sectores"/>
+				</field>
+				<field name="display_name" position="after">
+					<field name="x_idsAuthorizations" widget="many2many_tags" string = "Authorizations"/>
+				</field>
+				<field name="display_name" position="after">
+					<field name="x_idsAssociations" widget="many2many_tags" string = "Asociaciones"/>
+				</field>
+				<field name="display_name" position="after">
+					<field name="x_idsCountries" widget="many2many_tags" string = "Paises"/>
+				</field>
+				<field name="display_name" position="after">
+					<field name="x_idsFleet" string = "Flota"/>
+				</field>
 				<field name="display_name" position="after">
 					<field name="parent_id" string = "Matriz"/>
 				</field>
@@ -69,16 +175,22 @@
 					<page string="Transport" attrs="{'invisible': [('is_company','!=', True)]}">
 						<group col="6" colspan="2">
 							<group string="Fleet">
-								<field name="x_nTrucks"/>
-								<field name="x_nTrailers"/>
-								<field name="x_nRigidTrucks"/>
-								<field name="x_nBuses"/>
-								<field name="x_nContainers"/>
+								<field name="x_idsFleet" nolabel="1" readonly="0">
+									<tree string="Fleet categories">
+										<field name="x_eFleetCategory"/>
+										<field name="x_nFleetCategory"/>
+									</tree>
+									<form>
+										<group>
+											<field name="x_eFleetCategory"/>
+											<field name="x_nFleetCategory"/>
+										</group>
+									</form>
+								</field>
 							</group>
 							<group string="Countries">
-								<field name="x_idsCountries" options="{'no_create': True}" domain="[('name', 'in', 'get_europe')]" nolabel="1" readonly="0">
+								<field name="x_idsCountries" options="{'no_create': True}" nolabel="1" readonly="0">
 									<tree string="Countries">
-										<field name="code"/>
 										<field name="name"/>
 									</tree>
 								</field>
@@ -99,38 +211,27 @@
 										<field name="x_nAuthorization"/>
 									</tree>
 									<form>
-										<field name="x_eAuthorization"/>
-										<field name="x_nAuthorization"/>
+										<group>
+											<field name="x_eAuthorization"/>
+											<field name="x_nAuthorization"/>
+										</group>
 									</form>
 								</field>
 							</group>
 							<group string="Transport sectors">
-								<!-- label for="x_idsSectors"/ -->
-								<field name="x_idsSectors" nolabel="1" readonly="0">
+								<field name="x_idsSectors" options="{'no_create': True}" nolabel="1" readonly="0">
 									<tree string="Sectors">
-										<field name="x_eSector"/>
+										<field name="x_strSector"/>
 									</tree>
-									<form string="Sectors">
-										<group>
-											<field name="x_eSector"/>
-										</group>
-									</form>
 								</field>
 							</group>
 							<group string="Transport specialities">
-								<field name="x_idsSpecialities" nolabel="1" readonly="0">
+								<field name="x_idsSpecialities" options="{'no_create': True}" nolabel="1" readonly="0">
 									<tree string="Specialities">
-										<field name="x_eSpeciality"/>
+										<field name="x_strSpeciality"/>
 									</tree>
-									<form string="Specialities">
-										<group>
-											<field name="x_eSpeciality"/>
-										</group>
-									</form>
 								</field>
 							</group>
-						</group>
-						<group>
 						</group>
 					</page>
 				</notebook>

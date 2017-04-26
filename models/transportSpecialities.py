@@ -5,7 +5,7 @@ from openerp import models, fields, api
 from pygments.lexer import _inherit
 
 class transportSpecialities ( models.Model):
-	_name = "transport.specialities"
+	_name		= "transport.specialities"
+	_rec_name	= "x_strSpeciality" #IMPORTANTE - por este campo se hace la selección poe defecto en el formulario
 
-	x_strKey		= fields.Char ( string = "key")	
 	x_strSpeciality	= fields.Char ( string = "Transport speciality")
