@@ -5,11 +5,11 @@ from openerp import models, fields, api
 from pygments.lexer import _inherit
 
 class partnerTransportAutorizations ( models.Model):
-	_name = "partner.transport.autorizations"
+	_name = "partner.transport.authorizations"
 
 	def get_authorizations ( self):
 		l = []
-		for r in self.env["transport.autorizations"].search ([('id','>',-1)]):
+		for r in self.env["transport.authorizations"].search ([('id','>',-1)]):
 			l.append ( ( r.x_strKey, r.x_strAuthorization))
 		return l
 

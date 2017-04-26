@@ -20,6 +20,26 @@ class partnerTransport ( models.Model):
 	
 	x_idsSectors		= fields.One2many ( "partner.transport.sectors", "x_idPartner", string="Sectores")
 	x_idsSpecialities	= fields.One2many ( 'partner.transport.specialities', 'x_idPartner', string="Especialidades")
-	x_idsAuthorizations	= fields.One2many ( 'partner.transport.autorizations', 'x_idPartner', string="Autirizaciones")
-	x_idsAssociations	= fields.One2many ( 'partner.transport.associations', 'x_idPartner', string="Asociaciones")
-	x_idsCountries		= fields.One2many ( 'partner.transport.countries', 'x_idPartner', string="Countries", help="Countries there goes")
+	x_idsAuthorizations	= fields.One2many ( 'partner.transport.autorizations', 'x_idPartner', string="Autorizaciones")
+
+#	x_idsCountries		= fields.One2many ( 'partner.transport.countries', 'x_idPartner', string="Countries", help="Countries there goes")
+	x_idsCountries		= fields.Many2many	(
+												comodel_name	= "res.country",
+												relation		= "rel_partner_countries",
+												column1			= "partner_id",
+												column2			= "country_id",
+												string			= "Paises"
+											)
+	
+	x_idsAssociations	= fields.Many2many	(
+												comodel_name	= "transport.associations",
+												relation		= "rel_partner_associations",
+												column1			= "partner_id",
+												column2			= "association_id",
+												string			= "Asociaiones"
+											)
+	def get_europe ( self):
+		l = []
+		for r in self.env["res.country.group"].search ([('name','=', 'Europe')]).country_ids:
+			l.append ((r.name))
+		return l

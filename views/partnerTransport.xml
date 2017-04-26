@@ -2,8 +2,8 @@
 <openerp>
 	<data>
 		<!-- search view-->
-		<record model="ir.ui.view" id="partnerTree_form">
-			<field name="name">partnerTree_form</field>
+		<record model="ir.ui.view" id="partnerTransportTree_form">
+			<field name="name">partnerTransportTree_form</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_partner_tree"/>
 			<field name="arch" type="xml">
@@ -15,17 +15,17 @@
 	</data>
 	<data>
 		<!-- search view-->
-		<record model="ir.ui.view" id="partnerSearch_form">
-			<field name="name">partnerSearch_form</field>
+		<record model="ir.ui.view" id="partnerTransportSearch_form">
+			<field name="name">partnerTransportSearch_form</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_res_partner_filter"/>
 			<field name="arch" type="xml">
 				<!-- replace default filters -->
-				<filter name="customer" position="attributes">
-					<attribute name="domain">"[('is_company','=', True), ('customer','=',1)]"</attribute>
-				</filter>
+				<xpath expr="/search/filter[@name='customer']" position="attributes">
+					<attribute name="domain">"[('is_company','=', 1), ('customer','=',1)]"</attribute>
+				</xpath>
 				<filter name="supplier" position="attributes">
-					<attribute name="domain">"[('is_company','=', True), ('supplier','=',1)]"</attribute>
+					<attribute name="domain">"[('is_company','=', 1), ('supplier','=',1)]"</attribute>
 				</filter>
 			</field>
 		</record>
@@ -76,23 +76,18 @@
 								<field name="x_nContainers"/>
 							</group>
 							<group string="Countries">
-								<field name="x_idsCountries" nolabel="1" readonly="0">
+								<field name="x_idsCountries" options="{'no_create': True}" domain="[('name', 'in', 'get_europe')]" nolabel="1" readonly="0">
 									<tree string="Countries">
-										<field name="x_eCountry"/>
+										<field name="code"/>
+										<field name="name"/>
 									</tree>
-									<form string="Countries">
-										<field name="x_eCountry"/>
-									</form>
 								</field>
 							</group>
 							<group string="Associations">
-								<field name="x_idsAssociations" nolabel="1" readonly="0">
-									<tree string="Associations">
-										<field name="x_eAssociation"/>
+								<field name="x_idsAssociations" options="{'no_create': True}" nolabel="1">
+									<tree>
+										<field name="x_strAssociation"/>
 									</tree>
-									<form string="Associations">
-										<field name="x_eAssociation"/>
-									</form>
 								</field>
 							</group>
 						</group>
@@ -103,7 +98,7 @@
 										<field name="x_eAuthorization"/>
 										<field name="x_nAuthorization"/>
 									</tree>
-									<form string="Authorizations">
+									<form>
 										<field name="x_eAuthorization"/>
 										<field name="x_nAuthorization"/>
 									</form>

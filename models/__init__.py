@@ -4,8 +4,11 @@ from . import transportSectors
 from . import partnerTransportSectors
 from . import transportSpecialities
 from . import partnerTransportSpecialities
-from . import transportAutorizations
-from . import partnerTransportAutorizations
 from . import transportAssociations
-from . import partnerTransportAssociations
-from . import partnerTransportCountries
+
+from . import transportAuthorizations
+from . import partnerTransportAuthorizations
+
+#from . import partnerTransportAutorizations
+#from . import partnerTransportAssociations
+#from . import partnerTransportCountries

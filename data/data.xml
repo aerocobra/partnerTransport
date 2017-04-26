@@ -83,46 +83,42 @@
 		</record>
 	</data>
 	<data>
-		<record model="transport.autorizations" id="au1">
+		<record model="transport.authorizations" id="au1">
 			<field name="x_strKey">au1</field>
 			<field name="x_strAuthorization">L: Mercancias</field>
 		</record>
-		<record model="transport.autorizations" id="au2">
+		<record model="transport.authorizations" id="au2">
 			<field name="x_strKey">au2</field>
 			<field name="x_strAuthorization">L: Viajeros</field>
 		</record>
-		<record model="transport.autorizations" id="au3">
+		<record model="transport.authorizations" id="au3">
 			<field name="x_strKey">au3</field>
 			<field name="x_strAuthorization">A: Público de mercancias</field>
 		</record>
-		<record model="transport.autorizations" id="au4">
+		<record model="transport.authorizations" id="au4">
 			<field name="x_strKey">au4</field>
 			<field name="x_strAuthorization">A: Privado mercancias</field>
 		</record>
-		<record model="transport.autorizations" id="au5">
+		<record model="transport.authorizations" id="au5">
 			<field name="x_strKey">au5</field>
 			<field name="x_strAuthorization">A: Público viajeros autobus</field>
 		</record>
-		<record model="transport.autorizations" id="au6">
+		<record model="transport.authorizations" id="au6">
 			<field name="x_strKey">au6</field>
 			<field name="x_strAuthorization">A: Operador</field>
 		</record>
 	</data>
 	<data>
 		<record model="transport.associations" id="as1">
-			<field name="x_strKey">as1</field>
 			<field name="x_strAssociation">ASTIC</field>
 		</record>
 		<record model="transport.associations" id="as2">
-			<field name="x_strKey">as2</field>
 			<field name="x_strAssociation">CETM</field>
 		</record>
 		<record model="transport.associations" id="as3">
-			<field name="x_strKey">as3</field>
 			<field name="x_strAssociation">FEN</field>
 		</record>
 		<record model="transport.associations" id="as4">
-			<field name="x_strKey">as4</field>
 			<field name="x_strAssociation">Otro</field>
 		</record>
 	</data>
