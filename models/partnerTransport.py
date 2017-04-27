@@ -60,6 +60,7 @@ class partnerTransport ( models.Model):
 												column2			= "association_id",
 												string			= "Associations"
 											)
+	#queda aqui en calidad de ejemplo
 	@api.model
 	def get_europe ( self):
 		l = []
