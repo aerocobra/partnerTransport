@@ -8,4 +8,4 @@ class transportSpecialities ( models.Model):
 	_name		= "transport.specialities"
 	_rec_name	= "x_strSpeciality" #IMPORTANTE - por este campo se hace la selección poe defecto en el formulario
 
-	x_strSpeciality	= fields.Char ( string = "Transport speciality")
+	x_strSpeciality	= fields.Char ( string = "Especialidad")

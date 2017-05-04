@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
+		<record model="transport.job.positions" id="jp1">
+			<field name="x_strJobPosition">Presidente/CEO</field>
+		</record>
+		<record model="transport.job.positions" id="jp2">
+			<field name="x_strJobPosition">Secretaria dirección</field>
+		</record>
+		<record model="transport.job.positions" id="jp3">
+			<field name="x_strJobPosition">Director general</field>
+		</record>
+		<record model="transport.job.positions" id="jp4">
+			<field name="x_strJobPosition">Director RRHH</field>
+		</record>
+		<record model="transport.job.positions" id="jp5">
+			<field name="x_strJobPosition">Director legal</field>
+		</record>
+		<record model="transport.job.positions" id="jp6">
+			<field name="x_strJobPosition">Gestor flota/operaciones</field>
+		</record>
+		<record model="transport.job.positions" id="jp7">
+			<field name="x_strJobPosition">Otro</field>
+		</record>
+	</data>
+	<data>
 		<record model="transport.fleet_categories" id="fc1">
-			<field name="x_strFleetCategory">Trucks</field>
+			<field name="x_strFleetCategory">Cabezas tractoras</field>
 		</record>
 		<record model="transport.fleet_categories" id="fc2">
-			<field name="x_strFleetCategory">Trailers</field>
+			<field name="x_strFleetCategory">Semiremolques</field>
 		</record>
 		<record model="transport.fleet_categories" id="fc3">
-			<field name="x_strFleetCategory">Rigid Trucks</field>
+			<field name="x_strFleetCategory">Camiones rígidos</field>
 		</record>
 		<record model="transport.fleet_categories" id="fc4">
-			<field name="x_strFleetCategory">Buses</field>
+			<field name="x_strFleetCategory">Autobuses</field>
 		</record>
 		<record model="transport.fleet_categories" id="fc5">
-			<field name="x_strFleetCategory">Containers</field>
+			<field name="x_strFleetCategory">Contenedores</field>
 		</record>
 	</data>
 	<data>

@@ -7,3 +7,4 @@ from . import transportSectors
 from . import transportSpecialities
 from . import transportFleetCategories
 from . import partnerTransportFleetCategories
+from . import transportJobPositions

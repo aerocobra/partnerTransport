@@ -16,7 +16,7 @@ class partnerTransportFleetCategories ( models.Model):
 
 	x_idPartner			= fields.Many2one	(	comodel_name	= "res.partner")
 	x_eFleetCategory	= fields.Selection	(
-												string			= "Fleet category",
+												string			= "Flota",
 												selection		= "get_fleet_categories"
 											)
-	x_nFleetCategory	= fields.Integer	(	string			= "Amount")
+	x_nFleetCategory	= fields.Integer	(	string			= "Cantidad")

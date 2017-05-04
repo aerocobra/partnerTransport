@@ -7,29 +7,21 @@ from pygments.lexer import _inherit
 class partnerTransport ( models.Model):
 	_inherit = "res.partner"
 
-	x_eJobPosition	= fields.Selection (	string = "Cargo",
-											selection = [	('director_general', 'Director General'),
-															('director_financiero', 'Director Financiero'),
-															('director_flota', 'Director Flota'),
-															('sercretario', 'Secretario')])
+	x_idsJobPosition	= fields.Many2one	(	comodel_name	= "transport.job.positions",
+												string			= "Cargo"
+											)
 
-#	x_nTrucks		= fields.Integer ( string = "Trucks")
-#	x_nTrailers		= fields.Integer ( string = "Trailers")
-#	x_nRigidTrucks	= fields.Integer ( string = "Rigid Trucks")
-#	x_nBuses		= fields.Integer ( string = "Buses")
-#	x_nContainers	= fields.Integer ( string = "Containers")
-
-	x_idsFleet			= fields.One2many (
+	x_idsFleet			= fields.One2many	(
 												comodel_name	= "partner.transport.fleet_categories",
 												inverse_name	= "x_idPartner",
-												string			= "Fleet")
+												string			= "Flota")
 	
 	x_idsSectors		= fields.Many2many (
 												comodel_name	= "transport.sectors",
 												relation		= "rel_partner_sectors",
 												column1			= "partner_id",
 												column2			= "sector_id",
-												string			= "Sectors"
+												string			= "Sectores"
 											)
 
 	x_idsSpecialities	= fields.Many2many (
@@ -37,7 +29,7 @@ class partnerTransport ( models.Model):
 												relation		= "rel_partner_specialities",
 												column1			= "partner_id",
 												column2			= "speciality_id",
-												string			= "Specialities"
+												string			= "Especialidades"
 											)
 
 	x_idsAuthorizations	= fields.One2many (
@@ -58,7 +50,7 @@ class partnerTransport ( models.Model):
 												relation		= "rel_partner_associations",
 												column1			= "partner_id",
 												column2			= "association_id",
-												string			= "Associations"
+												string			= "Asociaciones"
 											)
 	#queda aqui en calidad de ejemplo
 	@api.model

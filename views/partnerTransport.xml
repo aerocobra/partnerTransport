@@ -67,6 +67,18 @@
 			sequence = "20"
 			action="action_transport_specialities"
 		/>
+		<!-- job positions -->
+		<act_window id="action_transport_job_positions"
+			name = "Job positions"
+			res_model = "transport.job.positions"
+			view_mode = "tree,form"		
+		/>
+		<menuitem id="menu__transport_job_positions"
+			name = "Job positions"
+			parent = "menu_transport"
+			sequence = "20"
+			action="action_transport_job_positions"
+		/>
 	</data>
 	<data>
 		<!-- remove inherited geo loc fields -->
@@ -102,7 +114,7 @@
 					<field name="x_idsSectors" widget="many2many_tags" string = "Sectores"/>
 				</field>
 				<field name="display_name" position="after">
-					<field name="x_idsAuthorizations" widget="many2many_tags" string = "Authorizations"/>
+					<field name="x_idsAuthorizations" widget="many2many_tags" string = "Autorizaciones" invisible = "1" />
 				</field>
 				<field name="display_name" position="after">
 					<field name="x_idsAssociations" widget="many2many_tags" string = "Asociaciones"/>
@@ -114,7 +126,7 @@
 					<field name="x_idsFleet" widget="many2many_tags" string = "Flota"/>
 				</field>
 				<field name="display_name" position="after">
-					<field name="parent_id" string = "Matriz"/>
+					<field name="parent_id" string = "Matriz" invisible = "1" />
 				</field>
 			</field>
 		</record>
@@ -147,17 +159,16 @@
 			<field name="inherit_id" ref="base.view_partner_form"/>
 			<!-- new structure in the form view -->
 			<field name="arch" type="xml">
-				<!-- new field x_eJobPosition in the form view -->
+				<!-- new field x_idsJobPosition in the form view -->
 				<field name="function" position="after">
-						<field name="x_eJobPosition" attrs="{'invisible': [('is_company','=', True)]}"/>
+						<field name="x_idsJobPosition" widget="Many2one" attrs="{'invisible': [('is_company','=', True)]}"/>
 				</field>
-				<!-- hide standard function field, x_eJobPosition instead-->
 				<field name="function" position="attributes">
 					<attribute name="invisible">True</attribute>
 				</field>
 				<!-- pop up funcion invisible-->
 				<xpath expr="/form/sheet/notebook/page/field/form/sheet/group/group/field[@name='function']" position="after">
-					<field name="x_eJobPosition"/>
+					<field name="x_idsJobPosition" widget="Many2one" />
 				</xpath>
 				<xpath expr="/form/sheet/notebook/page/field/form/sheet/group/group/field[@name='function']" position="attributes">
 					<attribute name="invisible">True</attribute>
@@ -170,11 +181,11 @@
 				</field>
 				<!-- folders -->
 				<notebook position="inside">
-					<page string="Transport" attrs="{'invisible': [('is_company','!=', True)]}">
+					<page string="Transporte" attrs="{'invisible': [('is_company','!=', True)]}">
 						<group col="6" colspan="2">
-							<group string="Fleet">
+							<group>
 								<field name="x_idsFleet" nolabel="1" readonly="0">
-									<tree string="Fleet categories">
+									<tree string="Flota">
 										<field name="x_eFleetCategory"/>
 										<field name="x_nFleetCategory"/>
 									</tree>
@@ -186,25 +197,25 @@
 									</form>
 								</field>
 							</group>
-							<group string="Countries">
+							<group>
 								<field name="x_idsCountries" options="{'no_create': True}" nolabel="1" readonly="0">
-									<tree string="Countries">
+									<tree string="Paises">
 										<field name="name"/>
 									</tree>
 								</field>
 							</group>
-							<group string="Associations">
+							<group>
 								<field name="x_idsAssociations" options="{'no_create': True}" nolabel="1">
-									<tree>
+									<tree string="Asociaciones">
 										<field name="x_strAssociation"/>
 									</tree>
 								</field>
 							</group>
 						</group>
 						<group col="6" colspan="2">
-							<group string="Authorizations">
+							<group>
 								<field name="x_idsAuthorizations" nolabel="1" readonly="0">
-									<tree string="Authorizations">
+									<tree string="Autorizaciones">
 										<field name="x_eAuthorization"/>
 										<field name="x_nAuthorization"/>
 									</tree>
@@ -216,16 +227,16 @@
 									</form>
 								</field>
 							</group>
-							<group string="Transport sectors">
+							<group>
 								<field name="x_idsSectors" options="{'no_create': True}" nolabel="1" readonly="0">
-									<tree string="Sectors">
+									<tree string="Sectores">
 										<field name="x_strSector"/>
 									</tree>
 								</field>
 							</group>
-							<group string="Transport specialities">
+							<group>
 								<field name="x_idsSpecialities" options="{'no_create': True}" nolabel="1" readonly="0">
-									<tree string="Specialities">
+									<tree string="Especialidades">
 										<field name="x_strSpeciality"/>
 									</tree>
 								</field>

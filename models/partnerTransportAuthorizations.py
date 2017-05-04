@@ -15,5 +15,5 @@ class partnerTransportAutorizations ( models.Model):
 		return l
 
 	x_idPartner			= fields.Many2one	( "res.partner")
-	x_eAuthorization	= fields.Selection	( string = "Transport authorization", selection = "get_authorizations")
-	x_nAuthorization	= fields.Integer	( string = "Amount")
+	x_eAuthorization	= fields.Selection	( string = "Autorización", selection = "get_authorizations")
+	x_nAuthorization	= fields.Integer	( string = "Cantidad")
