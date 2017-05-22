@@ -18,6 +18,7 @@
     "data": [
 		"views/partnerTransport.xml",
 		"data/data.xml",
+		"security/ir.model.access.csv",
     ],
     "installable": True,
     "application": True,

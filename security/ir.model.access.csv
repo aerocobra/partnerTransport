@@ -1,0 +1,9 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_transport_authorizations,partner.transport.authorizations.user,model_partner_transport_authorizations,base.group_user,1,1,1,1
+access_partner_transport_fleet_categories,partner.transport.fleet_categories.user,model_partner_transport_fleet_categories,base.group_user,1,1,1,1
+access_transport_associations,transport.associations.user,model_transport_associations,base.group_user,1,1,1,1
+access_transport_authorizations,transport.authorizations.user,model_transport_authorizations,base.group_user,1,1,1,1
+access_transport_fleet_categories,transport.fleet_categories.user,model_transport_fleet_categories,base.group_user,1,1,1,1
+access_transport_job_positions,transport.job.positions.user,model_transport_job_positions,base.group_user,1,1,1,1
+access_transport_sectors,transport.sectors.user,model_transport_sectors,base.group_user,1,1,1,1
+access_transport_specialities,transport.specialities.user,model_transport_specialities,base.group_user,1,1,1,1

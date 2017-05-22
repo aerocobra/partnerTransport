@@ -44,7 +44,7 @@ class partnerTransport ( models.Model):
 												column2			= "country_id",
 												string			= "Paises"
 											)
-	
+
 	x_idsAssociations	= fields.Many2many	(
 												comodel_name	= "transport.associations",
 												relation		= "rel_partner_associations",
@@ -52,6 +52,17 @@ class partnerTransport ( models.Model):
 												column2			= "association_id",
 												string			= "Asociaciones"
 											)
+
+	x_idParentCompany	= fields.Many2one	(	comodel_name	= "res.partner",
+												string			= "Matiz"
+											)
+
+	x_idsChildCompanies	=	fields.One2many (
+												comodel_name	= "res.partner",
+												inverse_name	= "x_idParentCompany",
+												string			= "Subsidiarias"
+											)
+
 	#queda aqui en calidad de ejemplo
 	@api.model
 	def get_europe ( self):
