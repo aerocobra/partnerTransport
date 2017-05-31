@@ -37,20 +37,20 @@ class partnerTransport ( models.Model):
 												inverse_name	= "x_idPartner",
 												string			= "Autorizaciones")
 
-	x_idsCountries		= fields.Many2many	(
-												comodel_name	= "res.country",
-												relation		= "rel_partner_countries",
-												column1			= "partner_id",
-												column2			= "country_id",
-												string			= "Paises"
-											)
-
 	x_idsAssociations	= fields.Many2many	(
 												comodel_name	= "transport.associations",
 												relation		= "rel_partner_associations",
 												column1			= "partner_id",
 												column2			= "association_id",
 												string			= "Asociaciones"
+											)
+
+	x_idsCountries		= fields.Many2many	(
+												comodel_name	= "res.country",
+												relation		= "rel_partner_countries",
+												column1			= "partner_id",
+												column2			= "country_id",
+												string			= "Paises"
 											)
 
 	x_idParentCompany	= fields.Many2one	(	comodel_name	= "res.partner",

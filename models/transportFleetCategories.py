@@ -5,6 +5,6 @@ from openerp import models, fields, api
 
 class transportFleetCategories ( models.Model):
 	_name		= "transport.fleet_categories"
-	_rec_name	= "x_strFleetCategory" #IMPORTANTE - por este campo se hace la selección poe defecto en el formulario
+	_rec_name	= "x_strFleetCategory" #IMPORTANTE - por este campo se hace la selección por defecto en el formulario
 
 	x_strFleetCategory	= fields.Char ( string = "Flota")
